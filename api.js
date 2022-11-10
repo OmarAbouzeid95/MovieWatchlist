@@ -49,7 +49,7 @@ function addMovieListToHtml (data) {
         
     }));
     const addIcons = document.querySelectorAll(".add-watchlist");
-    add.icons.forEach(icon => {
+    addIcons.forEach(icon => {
         icon.addEventListener("click", function watchlist (e) {
             addToLocalStorage(e.target.parentElement.getAttribute("index"))
             e.target.parentElement.innerHTML = `<p class="done"><img class="add-icon" src="./icons/done-icon.svg"> Added to watchlist</p>`;
