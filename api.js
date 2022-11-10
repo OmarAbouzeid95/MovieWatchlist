@@ -1,4 +1,4 @@
-import {apiKey, baseUrl, posterPath, movieGenres} from "/info.js"
+import {apiKey, baseUrl, posterPath, movieGenres} from "./info.js"
 
 let moviesArray = [], localStorageArray = [];
 let windowLength = window.innerWidth;
