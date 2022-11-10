@@ -17,6 +17,10 @@ body {
   justify-content: space-between;
 }
 
+button {
+  color: black;
+}
+
 .header a,
 #add-movies-link {
   padding-top: 1.6em;
@@ -93,7 +97,8 @@ body {
   cursor: pointer;
 }
 
-.add-icon {
+.add-icon,
+.remove-icon {
   position: relative;
   top: 3px;
 }
@@ -175,9 +180,12 @@ hr {
     width: 10px;
   }
   .add-icon,
-  .remove-watchlist-btn {
+  .remove-icon {
     width: 12px;
     top: 2px;
+  }
+  #search-button {
+    font-weight: bold;
   }
 }
 
@@ -200,10 +208,13 @@ hr {
     width: 7px;
   }
   .add-icon,
-  .remove-watchlist-btn {
+  .remove-icon {
     width: 10px;
   }
   .done img {
     width: 20px;
+  }
+  #search-button {
+    font-weight: bold;
   }
 }
