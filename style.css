@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.header-container {
+  background-color: #7dcbf4;
+}
+
+.header {
+  margin: auto;
+  max-width: 700px;
+  padding: 4em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header a,
+#add-movies-link {
+  padding-top: 1.6em;
+  color: black;
+  text-decoration: none;
+}
+
+.search-container {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  align-self: center;
+  margin-top: -0.7em;
+}
+
+#search-bar {
+  padding-left: 2em;
+  width: 100%;
+  height: 1.5em;
+  margin: auto;
+  margin-right: 0;
+  background-image: url("/icons/search-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: left;
+  border: 1.5px solid black;
+  border-radius: 0.2em;
+}
+
+#search-button {
+  border-radius: 0.2em;
+  border: 1.5px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.movies-container {
+  max-width: 950px;
+  margin: auto;
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+}
+
+#explore-div {
+  align-items: center;
+  text-align: center;
+}
+
+.movie-info {
+  display: flex;
+}
+
+.movie-poster {
+  border-radius: 1em;
+  height: 200px;
+  margin: 1em 1.5em 0 0;
+}
+
+.movie-details {
+  padding-top: 1em;
+}
+
+.watchlist-btn,
+.remove-watchlist-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.add-icon {
+  position: relative;
+  top: 3px;
+}
+
+.movie-title {
+  font-weight: bold;
+}
+
+.movie-title img {
+  margin: 0 0.2em 0 0.5em;
+}
+
+hr {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.read-more {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+  padding-left: 0.8em;
+}
+
+.addToWatchlist,
+.removeFromWatchlist {
+  display: flex;
+  align-items: center;
+}
+
+.add-watchlist {
+  cursor: pointer;
+}
+
+@keyframes slide {
+  0% {
+    left: -50px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.done {
+  position: relative;
+  color: green;
+  margin: 0;
+  animation-name: slide;
+  animation-duration: 0.5s;
+}
+
+.done img {
+  width: 13%;
+  height: auto;
+  position: relative;
+  top: 7px;
+  margin-right: -0.3em;
+}
+
+#error-message {
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .header {
+    font-size: 0.8em;
+  }
+  .movie-info {
+    font-size: 0.8em;
+  }
+  .movie-info .movie-title {
+    font-size: 0.9em;
+  }
+  .movie-poster {
+    height: 180px;
+  }
+  .movie-title img {
+    width: 10px;
+  }
+  .add-icon,
+  .remove-watchlist-btn {
+    width: 12px;
+    top: 2px;
+  }
+}
+
+@media (max-width: 470px) {
+  .header {
+    font-size: 0.7em;
+  }
+  .movie-info {
+    font-size: 0.7em;
+  }
+  .movie-info .movie-title {
+    font-size: 0.8em;
+  }
+  .movie-poster {
+    height: 160px;
+  }
+
+  .movie-title img {
+    width: 7px;
+  }
+  .add-icon,
+  .remove-watchlist-btn {
+    width: 10px;
+  }
+  .done img {
+    width: 20px;
+  }
+}
