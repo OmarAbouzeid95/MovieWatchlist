@@ -50,6 +50,7 @@ body {
 #search-button {
   position: absoulte;
   align-self: center;
+  right: 0;
   border-radius: 0.2em;
   border: none;
   background-color: transparent;
