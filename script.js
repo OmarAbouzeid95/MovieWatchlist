@@ -1,4 +1,4 @@
-import { getSearchedKey } from "/api.js";
+import { getSearchedKey } from "./api.js";
 
 const searchBar = document.getElementById("search-bar");
 const searchBtn = document.getElementById("search-button");
