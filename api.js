@@ -45,14 +45,14 @@ function addMovieListToHtml (data) {
     watchlistBtns.forEach(button => button.addEventListener("click", function watchlist (e){
         console.log(e)
         addToLocalStorage(e.target.parentElement.getAttribute("index"))
-        e.target.parentElement.innerHTML = `<p class="done"><img class = "add-icon" src="./icons/done-icon.svg"> Added to watchlist</p>`;
+        e.target.parentElement.innerHTML = `<div class="done"><img class = "add-icon" src="./icons/done-icon.svg"><p class="done-msg"> Added to watchlist</p></div>`;
         
     }));
     const addIcons = document.querySelectorAll(".add-watchlist");
     addIcons.forEach(icon => {
         icon.addEventListener("click", function watchlist (e) {
             addToLocalStorage(e.target.parentElement.getAttribute("index"))
-            e.target.parentElement.innerHTML = `<p class="done"><img class="add-icon" src="./icons/done-icon.svg"> Added to watchlist</p>`;
+            e.target.parentElement.innerHTML = `<div class="done"><img class="add-icon" src="./icons/done-icon.svg"><p class="done-msg"> Added to watchlist</p></div>`;
         })
     })
     const readMoreBtns = document.querySelectorAll(".read-more");
