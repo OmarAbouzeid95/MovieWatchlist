@@ -16,7 +16,7 @@ function addMovieListToHtml (data) {
         
         const movieData = {
             title: data.results[i].original_title,
-            poster: posterPath.concat(data.results[i].poster_path),
+            poster: data.results[i].poster_path === null ? "./icons/defaultPoster.png" : posterPath.concat(data.results[i].poster_path),
             rating: (data.results[i].vote_average).toFixed(1),
             overview: data.results[i].overview,
             genres: getMovieGenres(data.results[i].genre_ids),
@@ -69,7 +69,7 @@ function addMovieListToHtml (data) {
 async function getSearchedKey (searchKey) {
 
     const res = await fetch(`${baseUrl}/search/movie?api_key=${apiKey}&language=en-US&query=${searchKey}`)
-    const data = await res.json();
+    const data = await res.json()
     if(data.results.length === 0){
         document.querySelector(".movies-container").innerHTML = `
             <div>
